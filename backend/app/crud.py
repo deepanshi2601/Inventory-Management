@@ -140,7 +140,7 @@ def create_order(db: Session, order_data: schemas.OrderCreate):
     # We will create the Order with 0 total first, then update it
     db_order = models.Order(customer_id=order_data.customer_id, total_amount=0.0)
     db.add(db_order)
-    db.flush()  # Generate db_order.id
+    db.flush() 
 
     total_amount = 0.0
     items_to_add = []

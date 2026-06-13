@@ -6,13 +6,11 @@ export default function Products({ showToast }) {
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState('');
   
-  // Modal states
   const [isAddOpen, setIsAddOpen] = useState(false);
   const [isEditOpen, setIsEditOpen] = useState(false);
   const [isDetailOpen, setIsDetailOpen] = useState(false);
   const [currentProduct, setCurrentProduct] = useState(null);
   
-  // Form states
   const [formData, setFormData] = useState({
     sku: '',
     name: '',

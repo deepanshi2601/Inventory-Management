@@ -6,12 +6,10 @@ export default function Customers({ showToast }) {
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState('');
 
-  // Modal states
   const [isAddOpen, setIsAddOpen] = useState(false);
   const [isDetailOpen, setIsDetailOpen] = useState(false);
   const [currentCustomer, setCurrentCustomer] = useState(null);
 
-  // Form states
   const [formData, setFormData] = useState({
     name: '',
     email: '',

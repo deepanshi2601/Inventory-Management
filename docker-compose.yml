@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   db:
-    image: postgres:latest
+    image: postgres:16
     container_name: inventory_db_container
     restart: always
     environment:
@@ -22,6 +22,7 @@ services:
     restart: always
     environment:
       DATABASE_URL: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@db:5432/${POSTGRES_DB:-inventory_db}
+      CORS_ORIGINS: ${CORS_ORIGINS:-["*"]}
     ports:
       - "8000:8000"
     depends_on:

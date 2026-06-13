@@ -7,12 +7,10 @@ export default function Orders({ showToast }) {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // Modal states
   const [isAddOpen, setIsAddOpen] = useState(false);
   const [isDetailOpen, setIsDetailOpen] = useState(false);
   const [currentOrder, setCurrentOrder] = useState(null);
 
-  // Form states
   const [selectedCustomerId, setSelectedCustomerId] = useState('');
   const [orderItems, setOrderItems] = useState([
     { product_id: '', quantity: 1 }
