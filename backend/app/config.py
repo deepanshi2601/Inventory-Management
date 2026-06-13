@@ -12,8 +12,6 @@ class Settings(BaseSettings):
     # In production, set these as environment variables on Render/Railway/etc.
     # Locally, they are overridden by the .env file found at: backend/.env
     DATABASE_URL: str = "postgresql://postgres:postgres@localhost:5432/inventory_db"
-    HOST: str = "0.0.0.0"
-    PORT: int = 8000
     CORS_ORIGINS: List[str] = ["*"]
 
     class Config:
